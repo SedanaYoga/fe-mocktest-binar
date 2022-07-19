@@ -13,6 +13,7 @@ export function useUserReducer() {
         return {
           ...state,
           isLoading: true,
+          user: null,
           error: '',
         }
       case 'LOGIN_USER_SUCCESS':

@@ -32,11 +32,16 @@ const MainContextProvider = ({ children }) => {
           type: 'LOGIN_USER_SUCCESS',
           payload: user,
         })
+        if (user.errors) {
+          return false
+        } else {
+          return true
+        }
       } else {
-        userDispatch({ type: 'LOGIN_USER_ERROR', payload: user.error })
+        userDispatch({ type: 'LOGIN_USER_ERROR', payload: user.err })
       }
     },
-    logoutUser: async () => {
+    logoutUser: () => {
       userDispatch({ type: 'LOGOUT_USER' })
     },
     getProducts: async (token) => {

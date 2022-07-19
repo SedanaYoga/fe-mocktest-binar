@@ -24,13 +24,13 @@
     height: 30px;
     cursor: pointer;
   }
+
   ul {
     position: absolute;
     bottom: -50px;
     right: -100%;
     display: flex;
     justify-content: space-evenly;
-    gap: 1rem;
     li {
       padding: 0.5rem;
       border-radius: 8px;
@@ -79,6 +79,7 @@
         transform: translateX(0);
         cursor: pointer;
         box-shadow: none;
+        background: red;
       }
     }
     .navHamburger {

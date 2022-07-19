@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import NormalLayout from '../layouts/Normal/NormalLayout'
 import styles from '../styles/pages/Login.module.scss'
 import { useMainContext } from '../context/mainContext'
@@ -7,6 +8,7 @@ import { useState } from 'react'
 
 export default function Home() {
   const { loginUser } = useMainContext()
+  const router = useRouter()
 
   const [userValues, setUserValues] = useState({
     email: '',
@@ -21,7 +23,9 @@ export default function Home() {
   const submitHandler = async (e) => {
     e.preventDefault()
     const { email, password } = userValues
-    await loginUser(email, password)
+    if (await loginUser(email, password)) {
+      router.push('/dashboard')
+    }
   }
 
   return (
