@@ -1,0 +1,46 @@
+@import 'variables';
+
+@mixin centerFlexRow() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin centerFlexColumn() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin centerAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin mobile() {
+  @media (min-width: $bp-mobile) {
+    @content;
+  }
+}
+@mixin ipad() {
+  @media (min-width: $bp-ipad) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media (min-width: $bp-laptop) {
+    @content;
+  }
+}
+@mixin desktop() {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+@mixin large() {
+  @media (min-width: $bp-large) {
+    @content;
+  }
+}

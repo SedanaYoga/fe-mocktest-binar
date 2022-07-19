@@ -1,0 +1,51 @@
+@import '../scss/mixins';
+
+.main {
+  margin: 4rem auto 0;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+  @include centerFlexColumn;
+  .login {
+    @include centerFlexColumn;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem 1rem 2rem;
+    width: 100%;
+    gap: 1rem;
+    &Form {
+      @include centerFlexColumn;
+      width: 100%;
+      gap: 10px;
+      input {
+        width: 100%;
+        padding: 0 1rem;
+        height: 2.5rem;
+        border-radius: 8px;
+        border: 1px solid #999;
+      }
+      button {
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.8rem 0;
+        background: #444;
+        border: none;
+        border-radius: 8px;
+        color: white;
+      }
+    }
+  }
+  p {
+    margin-top: 1rem;
+    text-align: center;
+    a {
+      color: #999;
+      &:hover {
+        color: #555;
+      }
+      &:active {
+        color: #111;
+      }
+    }
+  }
+}

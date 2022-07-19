@@ -1,0 +1,11 @@
+@import '../../styles/scss/mixins';
+
+.container {
+  overflow: hidden;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 2rem;
+  @include laptop() {
+    max-width: 1200px;
+  }
+}
