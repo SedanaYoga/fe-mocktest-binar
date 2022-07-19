@@ -9,6 +9,13 @@ body,
   box-sizing: border-box;
   font-family: Avenir, Poppins, sans-serif;
 }
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
 
 a {
   color: black;

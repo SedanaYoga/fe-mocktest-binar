@@ -37,6 +37,27 @@ export function useUserReducer() {
           user: null,
           error: '',
         }
+      case 'REGISTER_USER_LOADING':
+        return {
+          ...state,
+          isLoading: true,
+          user: null,
+          error: '',
+        }
+      case 'REGISTER_USER_SUCCESS':
+        return {
+          ...state,
+          isLoading: false,
+          user: null,
+          error: '',
+        }
+      case 'REGISTER_USER_ERROR':
+        return {
+          ...state,
+          isLoading: false,
+          user: null,
+          error: action.payload,
+        }
       default:
         return state
     }
