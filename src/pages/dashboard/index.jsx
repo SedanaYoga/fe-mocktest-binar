@@ -3,7 +3,7 @@ import { useCallback, useEffect } from 'react'
 import NormalLayout from '../../layouts/Normal/NormalLayout'
 import ProductItem from '../../components/ProductItem/ProductItem'
 import styles from '../../styles/pages/Dashboard.module.scss'
-import { useMainContext } from '../../context/mainContext'
+import { useMainContext } from '../../context/MainContext'
 import { useRouter } from 'next/router'
 
 const Dashboard = () => {
