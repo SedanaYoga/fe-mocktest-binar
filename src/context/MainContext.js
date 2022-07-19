@@ -24,6 +24,18 @@ const MainContextProvider = ({ children }) => {
 
   const state = { userState, productState }
   const dispatch = {
+    createUser: async (name, email, password) => {
+      userDispatch({ type: 'REGISTER_USER_LOADING' })
+      const createdUser = await createUser(name, email, password)
+      if (!user.err) {
+        userDispatch({ type: 'REGISTER_USER_SUCCESS' })
+        if (user.errors) {
+          return false
+        } else createdUser
+      } else {
+        userDispatch({ type: 'REGISTER_USER_ERROR', payload: user.err })
+      }
+    },
     loginUser: async (email, password) => {
       userDispatch({ type: 'LOGIN_USER_LOADING' })
       const user = await loginUser(email, password)

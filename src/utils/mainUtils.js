@@ -22,10 +22,7 @@ export const loginUser = async (email, password) => {
 }
 
 export const createUser = async (name, email, password) => {
-  var params = new URLSearchParams()
-  params.append('name', name)
-  params.append('email', email)
-  params.append('password', password)
+  const data = { name, email, password }
   try {
     const response = await axios({
       method: 'post',
@@ -34,7 +31,7 @@ export const createUser = async (name, email, password) => {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      data: params,
+      data,
     })
     return response.data
   } catch (err) {

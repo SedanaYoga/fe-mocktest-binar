@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useMainContext } from '../../context/MainContext'
+import { useMainContext } from '../../context/mainContext'
 
 const NavBar = () => {
   const {
