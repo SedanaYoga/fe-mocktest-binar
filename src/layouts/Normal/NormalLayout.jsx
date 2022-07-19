@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/NavBar/Navbar.jsx'
 import styles from './NormalLayout.module.scss'
-import MainContextProvider from '../../context/mainContext'
+import MainContextProvider from '../../context/MainContext'
 
 const NormalLayout = ({ children }) => {
   return (
