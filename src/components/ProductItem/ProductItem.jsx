@@ -3,8 +3,13 @@ import { FiEdit } from 'react-icons/fi'
 import { MdDeleteOutline } from 'react-icons/md'
 import { useState } from 'react'
 
-const ProductItem = ({ product }) => {
-  const { name, price, imageurl } = product
+const ProductItem = ({
+  product,
+  getItemId,
+  showUpdateModal,
+  showDeleteModal,
+}) => {
+  const { id, name, price, imageurl } = product
   const [imgSrc, setImgSrc] = useState(imageurl)
   const imageNotFound = () => {
     setImgSrc('/images/default-image.png')
@@ -13,8 +18,22 @@ const ProductItem = ({ product }) => {
     <div className={styles.item}>
       <div className={styles.itemImage}>
         <div className={styles.itemImageIcons}>
-          <FiEdit color='black' className={styles.itemImageIcon} />
-          <MdDeleteOutline color='black' className={styles.itemImageIcon} />
+          <FiEdit
+            onClick={() => {
+              getItemId(id)
+              showUpdateModal()
+            }}
+            color='black'
+            className={styles.itemImageIcon}
+          />
+          <MdDeleteOutline
+            onClick={() => {
+              getItemId(id)
+              showDeleteModal()
+            }}
+            color='black'
+            className={styles.itemImageIcon}
+          />
         </div>
         <img src={imgSrc} onError={imageNotFound} alt={name} />
       </div>

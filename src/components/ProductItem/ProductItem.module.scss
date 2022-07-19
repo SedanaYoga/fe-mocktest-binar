@@ -13,13 +13,11 @@
     width: 100%;
     height: 50vw;
     overflow: hidden;
-    z-index: 1;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
-      z-index: 1;
     }
     &Icons {
       position: absolute;
@@ -28,7 +26,6 @@
       @include centerFlexRow;
       justify-content: space-between;
       width: 40px;
-      z-index: 3;
     }
     &Icon {
       cursor: pointer;

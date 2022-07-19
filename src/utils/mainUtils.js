@@ -95,13 +95,12 @@ export const getProductById = async (token, id) => {
 
 export const updateProduct = async (token, id, obj) => {
   try {
-    const response = await axios({
+    const response = await axios(`/v1/products/${id}`, {
       method: 'put',
-      url: `/v1/products/${id}`,
-      baseURL: 'https://test-binar.herokuapp.com',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `${token}`,
+        'Access-Control-Allow-Origin': '*',
       },
       data: obj,
     })
@@ -113,13 +112,12 @@ export const updateProduct = async (token, id, obj) => {
 
 export const deleteProductById = async (token, id) => {
   try {
-    const response = await axios({
+    const response = await axios(`/v1/products/${id}`, {
       method: 'delete',
-      url: `/v1/products/${id}`,
-      baseURL: 'https://test-binar.herokuapp.com',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `${token}`,
+        'Access-Control-Allow-Origin': '*',
       },
     })
     return response.data
