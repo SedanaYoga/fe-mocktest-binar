@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import NormalLayout from '../layouts/Normal/NormalLayout'
 import styles from '../styles/pages/Login.module.scss'
-import { useMainContext } from '../context/mainContext'
+import { useMainContext } from '../context/MainContext'
 import { useState } from 'react'
 
 export default function Home() {
