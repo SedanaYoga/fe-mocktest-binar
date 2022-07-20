@@ -1,34 +1,129 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div id="top"></div>
 
-## Getting Started
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <h3 align="center">Sedana Yoga - Frontend Mock Test </h3>
+  <img src="https://global-uploads.webflow.com/5e70b9a791ceb781b605048c/62c5720d8b3b6003c2f46fa4_logo-binar-academy.svg" alt="logo" height="100">
+  <p align="center">
+    A repository for completing Binar Career Development Program.
 
-First, run the development server:
+  </p>
+</div>
+<!-- ABOUT THE PROJECT -->
 
-```bash
-npm run dev
-# or
-yarn dev
+# About The Project
+
+In this mock test, the task was pretty straight forward. We have to translate the backend (provided by Binar) into a frontend design and fully functional including cosuming the API of User (login and register) and Product (CRUD functionality). The site is fully up and running in this url https://mocktest-binar.vercel.app/
+
+![Login][login]
+![Register][register]
+![Products][products]
+![Create][create]
+![Edit][edit]
+![Delete][delete]
+![Responsive][responsive]
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Built With
+
+The following lists show my development stack:
+
+### Frontend Stack
+
+- [Next JS](https://nextjs.org/)
+- [SASS](https://sass-lang.com/)
+- [CSS Module](https://github.com/css-modules/css-modules)
+- [Axios](https://axios-http.com/docs/intro)
+
+### Backend Stack
+
+- [Provided by Binar](https://test-binar.herokuapp.com/)
+
+### Development Tools:
+
+- [Git](https://git-scm.com/)
+- [Neovim](https://neovim.io/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## What I've learnt?
+
+- `Integration NextJS with RESTful API` => in the past, I almost used Firebase for storing database and authentication, along with the CRUD method provided by Firestore. In this project, it's a bit different, I was using API documentation to connect with User Auth and Product CRUD which needs auth token to implement.
+- `ESLint Config for Deployment` => I learn about how to mitigate issues in deployment in this case I'm using Vercel, since its connect smoothly with GitHub and NextJS.
+- `Learn Best Practice of GitFlow` => Having 2 branches `dev` and `main` in github seems very convinient and more cleaner repository. And I connect them with Vercel which will treat `dev` as Preview Site and `main` as Production Site.
+- `Mitigate CORS issue` => was getting CORS issues in PUT and DELETE method but I managed to get it solved by setting my next config, so it's good stuff to know, not aware of this possibility in the past.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+# Getting Started
+
+## The Feature
+
+- CRUD Functionality of Products.
+- User Authentication with token
+- Fully Responsive Site
+- NextJS is implemented but only using CSR (Client Site Rendering)
+- Global State is used in this project using React Context API
+
+## Prerequisites
+
+If you want to edit the code, you need to have `nodejs` and `NPM`.
+
+Install all dependencies by this command if you already get node and npm installed in your system.
+
+```sh
+cd <repository-folder>
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Usage
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Set your terminal directory to `repository folder`
+- Start the Next Server by running this command
+  ```sh
+  npm run dev
+  ```
+- Open `localhost:3000` in your browser
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Learn More
+# Space for Improvement
 
-To learn more about Next.js, take a look at the following resources:
+- Cookies or Session implementation (if we refresh the page, it won't keep the token)
+- Notification Implementation to increase interactivity when loading/error/warning
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<!-- LICENSE -->
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Distributed under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Twitter - [@cok_yoga](https://twitter.com/Cok_Yoga)
+LinkedIn - [Sedana Yoga](https://github.com/SedanaYoga)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[login]: docs/login.png
+[register]: docs/register.png
+[products]: docs/products.png
+[create]: docs/create.png
+[edit]: docs/edit.png
+[delete]: docs/delete.png
+[responsive]: docs/responsive.png
